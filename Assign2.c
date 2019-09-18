@@ -47,7 +47,6 @@ void ChildF(int PipeOutFD, int PipeInFD) { // the child does the same as ParentF
   long M = 1;
   printf("The CHild is ready to start\n");
   while (M < 99999999999) {
-    printf("here\n");
     if (read(PipeInFD, Value, BufferS) == -1) {
       printf("Child read fail\n");
       exit(-1);
